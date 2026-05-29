@@ -55,7 +55,12 @@ let auth: any = null;
 if (isFirebaseEnabled) {
   try {
     app = getApps().length === 0 ? initializeApp(activeConfig) : getApp();
-    db = getFirestore(app, activeConfig.firestoreDatabaseId || 'default');
+    const dbId = activeConfig.firestoreDatabaseId;
+    if (dbId && dbId !== 'default' && dbId !== '(default)' && dbId.trim() !== '') {
+      db = getFirestore(app, dbId);
+    } else {
+      db = getFirestore(app);
+    }
     auth = getAuth(app);
     console.log("Firebase initialized successfully with cloud sync activated.");
 

@@ -1,10 +1,10 @@
 {
-  "projectId": "praxis-continuum-mpp0d",
-  "appId": "1:394804829952:web:aaf767dfe2ea0359ce1de5",
-  "apiKey": "AIzaSyCfH4tF2MUNlJ5w1-6eBesw14aQkSPXwIs",
-  "authDomain": "praxis-continuum-mpp0d.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-d2c335e1-d0d2-4d25-a010-260d0b809c7f",
-  "storageBucket": "praxis-continuum-mpp0d.firebasestorage.app",
-  "messagingSenderId": "394804829952",
-  "measurementId": ""
+  "projectId": "basak-khana-khajana",
+  "appId": "1:898292353775:web:f941bcee92f75f95dee91a",
+  "apiKey": "AIzaSyA3Mk_pkqjKT5ABsT0XQp02JFDxPmR-r6Y",
+  "authDomain": "basak-khana-khajana.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "storageBucket": "basak-khana-khajana.firebasestorage.app",
+  "messagingSenderId": "898292353775",
+  "measurementId": "G-83QRP5DS64"
 }
