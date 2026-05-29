@@ -1,0 +1,6 @@
+{
+  "name": "Basak Khana Khajana",
+  "description": "A full-stack, persistent food ordering and local token manager website for Basak Khana Khajana of Hansquea, Darjeeling, featuring interactive slide-menus and a secure admin panel.",
+  "requestFramePermissions": ["bluetooth"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

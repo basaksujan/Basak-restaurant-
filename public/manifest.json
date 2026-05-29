@@ -1,0 +1,23 @@
+{
+  "name": "Basak Khana Khajana",
+  "short_name": "BKK Food",
+  "description": "Authentic cooked food order and token manager in Hansquea, Darjeeling.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#b3751b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

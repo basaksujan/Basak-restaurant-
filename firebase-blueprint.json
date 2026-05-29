@@ -1,0 +1,114 @@
+{
+  "entities": {
+    "BusinessConfig": {
+      "title": "BusinessConfig",
+      "description": "General settings profile for Basak Khana Khajana",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "logo": { "type": "string" },
+        "location": { "type": "string" },
+        "address": { "type": "string" },
+        "contacts": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "about": { "type": "string" },
+        "mapIframeUrl": { "type": "string" },
+        "deliveryCharge": { "type": "number" },
+        "gstPercent": { "type": "number" },
+        "serviceFee": { "type": "number" }
+      },
+      "required": ["name", "location", "address", "contacts", "about", "mapIframeUrl"]
+    },
+    "Category": {
+      "title": "Category",
+      "description": "Menu categories for food filtering",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "color": { "type": "string" }
+      },
+      "required": ["id", "name"]
+    },
+    "FoodItem": {
+      "title": "FoodItem",
+      "description": "Menu listing item in the catalog",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "price": { "type": "number" },
+        "stock": { "type": "number" },
+        "image": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "required": ["id", "name", "category", "price", "stock", "image"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer food checkout order token",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "token": { "type": "string" },
+        "customerName": { "type": "string" },
+        "phone": { "type": "string" },
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "itemId": { "type": "string" },
+              "name": { "type": "string" },
+              "price": { "type": "number" },
+              "quantity": { "type": "number" }
+            },
+            "required": ["itemId", "name", "price", "quantity"]
+          }
+        },
+        "totalAmount": { "type": "number" },
+        "status": { "type": "string", "enum": ["pending", "completed", "cancelled"] },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "token", "customerName", "phone", "items", "totalAmount", "status", "createdAt"]
+    },
+    "Slide": {
+      "title": "Slide",
+      "description": "Feature promotional carousel slide item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "image": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "tag": { "type": "string" }
+      },
+      "required": ["id", "image", "title", "subtitle", "tag"]
+    }
+  },
+  "firestore": {
+    "/config/{configId}": {
+      "schema": "BusinessConfig",
+      "description": "Business general settings data"
+    },
+    "/categories/{categoryId}": {
+      "schema": "Category",
+      "description": "Categories for food menu items"
+    },
+    "/items/{itemId}": {
+      "schema": "FoodItem",
+      "description": "All food menu catalog items"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Cooking orders from customer app client checkout"
+    },
+    "/slides/{slideId}": {
+      "schema": "Slide",
+      "description": "Home hero slideshow slide images"
+    }
+  }
+}
